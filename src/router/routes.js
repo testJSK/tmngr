@@ -1,4 +1,6 @@
-export default function () => {
+import HomeView from '../views/Home.vue'
+
+export default function() {
     const routes = [
         {
             path: '/',
