@@ -14,7 +14,7 @@ export default {
     }
   },
   mounted() {
-    fetch('/api/message/hello')
+    fetch('/api/users/all')
       .then(response => response.text())
       .then(date => {
         this.msg = date;
