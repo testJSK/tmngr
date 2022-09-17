@@ -1,4 +1,4 @@
-const { defineConfig } = reuser_name char(50) NOT NULLquire('@vue/cli-service')
+const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
   devServer: {
