@@ -34,8 +34,6 @@ export default {
           this.one = data;
           console.log(this.users)
         });
-
-
   }
 }
 </script>

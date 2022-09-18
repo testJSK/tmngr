@@ -1,4 +1,4 @@
-import HomeView from '../views/Home.vue'
+import HomeView from '@/views/Home.vue'
 
 export default function() {
     const routes = [
