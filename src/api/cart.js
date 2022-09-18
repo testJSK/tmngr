@@ -3,9 +3,9 @@ export default http => ({
         let response = await http.get('users/all');
         return response.data;
     },
-    async add(token, id){
-        let response = await http.post('users');
-        return response.data;
-    }
+    // async add(token, id){
+    //     let response = await http.post('users');
+    //     return response.data;
+    // }
 
 })
