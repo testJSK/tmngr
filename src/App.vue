@@ -42,19 +42,14 @@
 </template>
 
 <script>
-// import HelloWorld from "@/components/HelloWorld.vue";
-// import HomeView from "@/views/Home";
-
 export  default {
   name: 'App',
   components: {
-    // HomeView,
-    // HelloWorld
+
   }
 }
 
 </script>
 
 <style>
-
 </style>

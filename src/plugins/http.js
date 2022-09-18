@@ -4,7 +4,8 @@ import createProductApi from '@/api/products';
 
 export default () => {
     const http = axios.create({
-        baseURL: 'http://localhost:8080/api/',
+        // baseURL: 'http://localhost:8080/api/',
+        baseURL: 'http://faceprog.ru/reactcourseapi/',
         timeout: 10000,
     });
 
@@ -12,5 +13,6 @@ export default () => {
         cart: createCartApi(http),
         product: createProductApi(http),
     }
+
     return { http, api };
 }

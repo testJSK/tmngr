@@ -27,11 +27,10 @@ export default {
   },
   data(){
     return{
-      prod: []
     }
   },
   computed: {
-    ...mapGetters( 'product', { products: 'items' })
+    ...mapGetters( 'products', { products: 'items' })
   }
   // mounted() {
   //   fetch('/api/products/all')
