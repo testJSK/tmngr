@@ -6,7 +6,7 @@ import createRouter from '@/router';
 
 export default () => {
     const { http, api } = createHttp();
-    console.log(http + ' ');
+    console.log(http );
     const store = createStore(api);
     const router = createRouter(store);
 
@@ -15,4 +15,6 @@ export default () => {
         .use(router)
         .mount('#app')
 
+
+    store.dispatch('products/load')
 }

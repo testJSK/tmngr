@@ -13,9 +13,11 @@ export default productsApi => ({
     },
     actions: {
         async load({ commit }){
-            console.log('actions')
             const  products = await productsApi.all();
+            console.log(products)
+
             commit('set', products);
+
         }
     },
 })
