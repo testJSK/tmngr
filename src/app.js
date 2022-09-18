@@ -1,9 +1,11 @@
-import { createApp } from 'vue'
-import App from '@/App.vue'
-import createStore from '@/store'
-import createRouter from '@/router'
+import { createApp } from 'vue';
+import App from '@/App.vue';
+import createHttp from '@/plugins/http';
+import createStore from '@/store';
+import createRouter from '@/router';
 
 export default () => {
+    const http = createHttp()
     const store = createStore();
     const router = createRouter();
 
