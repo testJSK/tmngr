@@ -2,10 +2,10 @@ import { createStore } from 'vuex';
 import createCartStore from '@/store/cart';
 import createProductStore from '@/store/product'
 
-export default () => createStore({
+export default api => createStore({
   modules: {
-    cart: createCartStore(),
-    product: createProductStore(),
+    cart: createCartStore(api.cart),
+    product: createProductStore(api.products),
   },
   strict: process.env.NODE_ENV !== 'production'
 })

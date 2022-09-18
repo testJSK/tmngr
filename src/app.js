@@ -5,9 +5,9 @@ import createStore from '@/store';
 import createRouter from '@/router';
 
 export default () => {
-    const http = createHttp()
-    const store = createStore();
-    const router = createRouter();
+    const { http, api } = createHttp()
+    const store = createStore(api);
+    const router = createRouter(store);
 
     createApp(App)
         .use(store)
