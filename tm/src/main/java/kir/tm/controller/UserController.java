@@ -33,7 +33,7 @@ public class UserController {
     public List<UserEntity> getUsers() {
         try {
             return userService.getAll();
-//                    ResponseEntity.ok("Сервер работает");
+
         } catch (Exception e) {
             return (List<UserEntity>) ResponseEntity.badRequest().body("Произошла ошибка");
         }
