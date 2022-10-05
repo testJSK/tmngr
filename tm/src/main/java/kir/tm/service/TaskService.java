@@ -15,10 +15,20 @@ public class TaskService {
     @Autowired
     private UserRepo userRepo;
 
-    public Task createRequest(TaskEntity request, Long userId) {
+    public Task createTask(TaskEntity task, Long userId) {
         UserEntity user = userRepo.findById(userId).get();
-        request.setUser(user);
-        return Task.toModel(taskRepo.save(request));
+        task.setUser(user);
+        return Task.toModel(taskRepo.save(task));
+    }
+
+    public Task getOne(Long id) {
+        TaskEntity task = taskRepo.findById(id).get();
+        return Task.toModel(task);
+    }
+
+    public TaskEntity addTask(TaskEntity task) {
+
+        return taskRepo.save(task);
     }
 
 //    public TaskEntity updateRequest(TaskEntity request, Long userId) {

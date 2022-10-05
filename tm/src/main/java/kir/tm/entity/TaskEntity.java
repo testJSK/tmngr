@@ -6,6 +6,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "task")
 public class TaskEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,10 +14,12 @@ public class TaskEntity {
     @Column(nullable = false)
     private String title;
     private String description;
-    @JsonFormat(pattern="yyyy-MM-ddTHH:mm:ss")
+    @JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime start;
+    @JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime stop;
     private Long status;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private UserEntity user;
